@@ -6,7 +6,7 @@ const HomeDesktop = () => {
     <div className="home">
       <header className="home__header">
         <nav className="navbar">
-          <img src="/assets/logo.png" alt="FitSync Gym Logo" className="navbar__logo" />
+          <img src="/assets/logo_fitsync-01.webp" alt="Logo__gym-fitsync" className="navbar__logo" />
           <ul className="navbar__menu">
             <li>Home</li>
             <li>Services</li>
@@ -18,14 +18,25 @@ const HomeDesktop = () => {
       </header>
 
       <section className="home__hero">
-        <h1>Welcome to FitSync Gym</h1>
-        <p>Your fitness journey starts here</p>
-        <button className="hero__cta">Join Us Today</button>
+        <h1>Controla tu entrenamiento en la palma de tu mano</h1>
+        <img src="/assets/phone_fitsync.png" alt="FitSync Gym Image" className="home__phone-image" />
       </section>
 
       <section className="home__services">
-        <h2>What We Offer</h2>
-        <div className="services__list">
+        <h2>CONOCE NUESTROS PLANES</h2>
+        <ul className='home__list-plans'>
+          <li>Permiso para el uso de las Instalaciones</li>
+          <li>Sala de masajes</li>
+          <li>Danza Aeróbica</li>
+          <li>Personal Trainer presencial / App</li>
+          <li>Nutricionista vía App</li>
+          <li>APP de rutina & asesoramiento</li>
+          <li>Promociones adicionales en la store</li>
+        </ul>
+        <button className="Service__cta">Contactar</button>
+      </section>
+      <section className='home__services'>
+      <div className="services__list">
           <div className="service">
             <h3>Personal Training</h3>
             <p>One-on-one sessions with our expert trainers</p>
@@ -38,7 +49,7 @@ const HomeDesktop = () => {
             <h3>Nutrition Plans</h3>
             <p>Customized plans to fit your goals</p>
           </div>
-        </div>
+        </div> 
       </section>
 
       <footer className="footer">

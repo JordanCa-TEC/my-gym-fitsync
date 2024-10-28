@@ -34,8 +34,18 @@ $background-light: #f8f8f8;
     }
   }
 
+  &__list-plans{
+    width: 20%;
+    text-align: left;
+    color: #000000;
+  }
+
+  &__phone-image{
+    width: 50%;
+  }
+
   &__hero {
-    background-image: url('//public/assets/Gymnasio-Fitsync.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/Gymnasio-Fitsync.jpg');
     background-size: cover;
     background-position: center;
     color: $text-color;
@@ -48,15 +58,6 @@ $background-light: #f8f8f8;
     p {
       font-size: 1.8rem;
     }
-    .hero__cta {
-      background-color: $secondary-color;
-      padding: 15px 30px;
-      border: none;
-      cursor: pointer;
-      color: $primary-color;
-      font-weight: bold;
-      margin-top: 20px;
-    }
   }
 
   &__services {
@@ -67,6 +68,16 @@ $background-light: #f8f8f8;
       font-size: 2.5rem;
       margin-bottom: 40px;
     }
+    .Service__cta {
+      background-color: $secondary-color;
+      padding: 15px 30px;
+      border: none;
+      cursor: pointer;
+      color: $primary-color;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
     .services__list {
       display: flex;
       justify-content: space-around;
