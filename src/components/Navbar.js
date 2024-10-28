@@ -1,12 +1,14 @@
 // src/components/Navbar/Navbar.js
 import React from 'react';
-import '../sass/_Navbar.scss'; 
+import '../sass/_Navbar.scss';
+//import logo from '../assets/logo_fitsync-01.webp'; 
+import {logo} from '../assets/assets.js';
 
 const Navbar = () => {
   return (
     <header className="home__header">
     <nav className="navbar">
-      <img src="/assets/logo_fitsync-01.webp" alt="Logo__gym-fitsync" className="navbar__logo" />
+      <img src={logo} alt="Logo__gym-fitsync" className="navbar__logo" />
       <ul className="navbar__menu">
         <li><a href='/pages/Homedesktop.jsx'>Inicio</a></li>
 

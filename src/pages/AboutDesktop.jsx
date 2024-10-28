@@ -1,5 +1,5 @@
 import React from 'react';
-import '../sass/_aboutDesktop.scss'; // Estilos SASS
+import '../sass/_aboutDesktop.scss'; 
 
 const AboutDesktop = () => {
   return (
