@@ -5,9 +5,16 @@ $text-color: #ffffff;
 $background-light: #f8f8f8;
 
 .home__header {
+    width: 100%;
+    position: fixed;
+    justify-items: center;
+    z-index: 1000; 
+    top: 0;
+    left: 0;
     background-color: $primary-color;
-    padding: 20px;
+    padding: 1.3em;
     .navbar {
+      width: 80%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -24,7 +31,7 @@ $background-light: #f8f8f8;
       }
       &__cta {
         background-color: $secondary-color;
-        padding: 10px 20px;
+        padding: 30px 20px;
         border: none;
         cursor: pointer;
         color: $primary-color;

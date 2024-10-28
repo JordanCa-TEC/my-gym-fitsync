@@ -16,7 +16,7 @@ const Navbar = () => {
         <li>Shop</li>
         <li>Contact</li>
       </ul>
-      <button className="navbar__cta">Join Now</button>
+      <button className="navbar__cta">login</button>
     </nav>
   </header>
   );
