@@ -1,6 +1,7 @@
 import React from 'react';
 import '../sass/_homeDesktop.scss';
 import PromotionSlider from '../components/PromotionSlider';
+import {phone_home} from '../assets/assets.js'
 
 const HomeDesktop = () => {
   return (
@@ -8,7 +9,7 @@ const HomeDesktop = () => {
 
       <section className="home__hero">
         <h1>Controla tu entrenamiento en la palma de tu mano</h1>
-        <img src="/assets/phone_fitsync.png" alt="FitSync Gym Image" className="home__phone-image" />
+        <img src={phone_home} alt="FitSync Gym Image" className="home__phone-image" />
       </section>
 
       <section className="home__services">
