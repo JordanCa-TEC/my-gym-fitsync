@@ -1,0 +1,20 @@
+// Variables SASS
+$primary-color: #1c1c1c;
+$secondary-color: #ffcc00;
+$text-color: #ffffff;
+$background-light: #f8f8f8;
+
+.footer {
+    background-color: $primary-color;
+    color: $text-color;
+    padding: 20px;
+    text-align: center;
+    &__links {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      a {
+        color: $secondary-color;
+      }
+    }
+  }

@@ -26,10 +26,6 @@ const AboutDesktop = () => {
           </div>
         </div>
       </section>
-
-      <footer className="footer">
-        <p>&copy; 2024 FitSync Gym</p>
-      </footer>
     </div>
   );
 };
