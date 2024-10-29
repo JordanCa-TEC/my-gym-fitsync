@@ -1,8 +1,4 @@
-// Variables SASS
-$primary-color: #1c1c1c;
-$secondary-color: #ffcc00;
-$text-color: #ffffff;
-$background-light: #f8f8f8;
+@import 'variables';
 
 .home__header {
     width: 100%;
@@ -12,30 +8,36 @@ $background-light: #f8f8f8;
     top: 0;
     left: 0;
     background-color: $primary-color;
-    padding: 1.3em;
+    padding: 0.6em;
+    
     .navbar {
       width: 80%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      
       &__logo {
-        width: 120px;
+        width: 8%;
       }
       &__menu {
-        list-style: none;
         display: flex;
+        align-items: center;
+        list-style: none;
         gap: 25px;
-        li {
+        
+        a {
+          font-size: 1.2em;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
           color: $text-color;
+          padding: 1.3em 1.3em;
+          cursor: pointer;
+          font-weight: bold;
         }
-      }
-      &__cta {
-        background-color: $secondary-color;
-        padding: 30px 20px;
-        border: none;
-        cursor: pointer;
-        color: $primary-color;
-        font-weight: bold;
+        img {
+          width: 2.2em;
+        }
       }
     }
   }

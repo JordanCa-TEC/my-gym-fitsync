@@ -1,8 +1,4 @@
-// Variables SASS
-$primary-color: #1c1c1c;
-$secondary-color: #ffcc00;
-$text-color: #ffffff;
-$background-light: #f8f8f8;
+@import 'variables';
 
 .footer {
     background-color: $primary-color;

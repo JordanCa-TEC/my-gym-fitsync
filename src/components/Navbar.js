@@ -1,9 +1,9 @@
 // src/components/Navbar/Navbar.js
 import React from 'react';
-import '../sass/_Navbar.scss';
-//import logo from '../assets/logo_fitsync-01.webp'; 
+import '../sass/_Navbar.scss'; 
 import {logo} from '../assets/assets.js';
-
+import {carrito} from '../assets/assets.js';
+import {account_login} from '../assets/assets.js';
 const Navbar = () => {
   return (
     <header className="home__header">
@@ -11,12 +11,14 @@ const Navbar = () => {
       <img src={logo} alt="Logo__gym-fitsync" className="navbar__logo" />
       <ul className="navbar__menu">
         <li><a href='/pages/Homedesktop.jsx'>Inicio</a></li>
-
         <li><a href='/pages/AboutDesktop.jsx'>Quiénes somos</a></li>
-        <li>Shop</li>
-        <li>Contact</li>
+        <li><a href='#'>Shop</a></li>
+        <li><a href='#'>Contact</a></li>
       </ul>
-      <button className="navbar__cta">login</button>
+      <div className="navbar__menu">
+      <a href='#'><img src={carrito} alt="shopping cart" ></img></a>
+      <a href='#' >Login<img src={account_login} alt="shopping cart" ></img></a>
+      </div>
     </nav>
   </header>
   );

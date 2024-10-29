@@ -1,14 +1,6 @@
-// Variables SASS
-$primary-color: #1c1c1c;
-$secondary-color: #ffcc00;
-$text-color: #ffffff;
-$background-light: #f8f8f8;
+@import 'variables';
 
 .home {
-
-  &__phone-image{
-    width: 50%;
-  }
 
   &__hero {
     justify-content: center;
@@ -28,7 +20,8 @@ $background-light: #f8f8f8;
   }
 
   &__hero--box{
-    width: 60%;
+    width: 70%;
+    margin-top: 18em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,7 +34,7 @@ $background-light: #f8f8f8;
   &__services {
     background-color: $background-light;
     text-align: center;
-    padding: 50px 0;
+    padding: 70px 0;
     h2 {
       font-size: 2.5rem;
       margin-bottom: 40px;
