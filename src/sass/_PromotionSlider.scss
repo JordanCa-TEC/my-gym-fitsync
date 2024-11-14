@@ -1,67 +1,105 @@
 @import 'variables';
 
 .promotion-slider {
-    text-align: left;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+
+  /* Caja de texto: título, beneficios y botón de contacto */
+  &__text-box {
+    flex: 1;
     h2 {
+      font-size: 1.8em;
+      font-weight: bold;
+      margin-bottom: 10px;
+      .highlight {
+        color: $secondary-color;
+      }
+    }
+    .promotion-slider__benefits {
+      list-style: none;
+      padding: 0;
+      font-size: 0.9em;
+      margin-bottom: 20px;
+      li {
+        margin-bottom: 5px;
+      }
+    }
+    .promotion-slider__button {
+      margin: 20px 0;
+      padding: 10px 20px;
+      background-color: $secondary-color;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
       font-weight: bold;
     }
-    .highlight {
-      color: $secondary-color; 
-    }
-    &__benefits {
-      list-style-type: disc;
-      margin-top: 1rem;
-      color: #333;
-    }
-    &__button {
-      background-color: $secondary-color;
-      color: $text-color;
-      padding: 0.5rem 1rem;
-      border: none;
-      cursor: pointer;
-      margin-top: 1rem;
-    }
-    &__image-container {
-      display: flex;
-      justify-content: center;
-      margin-top: 1.5rem;
-      cursor: pointer;
+  }
+
+  /* Caja de tarjetas y puntos de navegación */
+  &__card-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .promotion-slider__image-container {
       position: relative;
+      width: 250px;
+      height: 140px;
+      perspective: 1000px;
+      cursor: pointer;
+
       .promotion-slider__card {
-        width: 200px;
-        height: 120px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #f0f0f0;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.5rem;
+        border-radius: 15px;
+        font-size: 1.2em;
         color: #333;
-        background: $background-light-02;
-        border-radius: 8px;
-        box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease;
-        position: absolute;
-      }
-      .active {
-        transform: scale(1.1);
-        background: $secondary-color;
-        color: $text-color;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        backface-visibility: hidden;
+        transition: transform 0.6s ease;
+        transform-origin: right center;
+
+        &:nth-child(2) {
+          background: #333;
+          color: $secondary-color;
+          transform: rotateY(180deg);
+        }
+
+        &.active {
+          transform: rotateY(0);
+        }
+
+        &:not(.active) {
+          transform: rotateY(-180deg);
+        }
       }
     }
-    &__dots {
+    .promotion-slider__dots {
       display: flex;
-      justify-content: center;
-      margin-top: 0.5rem;
+      gap: 8px;
+      margin-top: 15px;
+
       .dot {
         width: 10px;
         height: 10px;
-        border-radius: 50%;
         background-color: #ccc;
-        margin: 0 5px;
+        border-radius: 50%;
         cursor: pointer;
+        transition: background-color 0.3s ease;
+
         &.active {
-          background-color: #ffd700;
+          background-color: $secondary-color;
         }
       }
     }
   }
-  
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../sass/_homeDesktop.scss';
 import PromotionSlider from '../components/PromotionSlider';
-import {phone_home, promo_01, promo_02, promo_03} from '../assets/assets.js'
+import { phone_home,promo_01, promo_02, promo_03 } from '../assets/assets';
 
 const HomeDesktop = () => {
   return (
@@ -16,7 +16,6 @@ const HomeDesktop = () => {
 
       <section className="home__services">
         <PromotionSlider/>
-        <button className="Service__cta">Contactar</button>
       </section>
       <section className='home__services'>
       <h2 className='Promocion__title' >PROMOCIONES DEL MES</h2>

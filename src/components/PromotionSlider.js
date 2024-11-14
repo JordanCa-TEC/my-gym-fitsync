@@ -1,4 +1,3 @@
-// PromotionSlider.js
 import React, { useState } from 'react';
 import '../sass/_PromotionSlider.scss'; 
 
@@ -21,9 +20,8 @@ const promotions = [
     title: "REGULAR",
     benefits: [
       "Permiso para el uso de las Instalaciones",
-      "Personal Trainer vía App",
-      "APP de rutina básica",
-      "Promociones básicas en la store"
+      "Danza Aeróbica",
+      "Personal Trainer presencial"
     ]
   }
 ];
@@ -37,27 +35,38 @@ const PromotionSlider = () => {
 
   return (
     <div className="promotion-slider">
-      <h2>CONOCE NUESTROS <span className="highlight">PLANES</span></h2>
-      <ul className="promotion-slider__benefits">
-        {promotions[currentPromo].benefits.map((benefit, index) => (
-          <li key={index}>{benefit}</li>
-        ))}
-      </ul>
-      <button className="promotion-slider__button">Contactar</button>
-
-      <div className="promotion-slider__image-container" onClick={handleNextPromo}>
-        <div className={`promotion-slider__card ${currentPromo === 0 ? 'active' : ''}`}>
-          <p>{promotions[currentPromo].title}</p>
-        </div>
+      {/* Caja para el título, beneficios y botón de contacto */}
+      <div className="promotion-slider__text-box">
+        <h2>CONOCE NUESTROS <span className="highlight">PLANES</span></h2>
+        <ul className="promotion-slider__benefits">
+          {promotions[currentPromo].benefits.map((benefit, index) => (
+            <li key={index}>{benefit}</li>
+          ))}
+        </ul>
+        <button className="promotion-slider__button">Contactar</button>
       </div>
-      <div className="promotion-slider__dots">
-        {promotions.map((_, index) => (
-          <span
-            key={index}
-            className={`dot ${index === currentPromo ? 'active' : ''}`}
-            onClick={() => setCurrentPromo(index)}
-          ></span>
-        ))}
+
+      {/* Caja para las tarjetas y los puntos de navegación */}
+      <div className="promotion-slider__card-box">
+        <div className="promotion-slider__image-container" onClick={handleNextPromo}>
+          {promotions.map((promo, index) => (
+            <div
+              key={promo.id}
+              className={`promotion-slider__card ${index === currentPromo ? 'active' : ''}`}
+            >
+              <p>{promo.title}</p>
+            </div>
+          ))}
+        </div>
+        <div className="promotion-slider__dots">
+          {promotions.map((_, index) => (
+            <span
+              key={index}
+              className={`dot ${index === currentPromo ? 'active' : ''}`}
+              onClick={() => setCurrentPromo(index)}
+            ></span>
+          ))}
+        </div>
       </div>
     </div>
   );
