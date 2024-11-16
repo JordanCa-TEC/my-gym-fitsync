@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import '../sass/_PromotionSlider.scss'; 
+import { logo, logo_Alternative } from '../assets/assets';
 
 const promotions = [
   {
     id: 1,
     title: "PREMIUM",
+    image: logo_Alternative,
     benefits: [
       "Permiso para el uso de las Instalaciones",
       "Sala de masajes",
@@ -18,6 +20,7 @@ const promotions = [
   {
     id: 2,
     title: "REGULAR",
+    image: logo,
     benefits: [
       "Permiso para el uso de las Instalaciones",
       "Danza Aeróbica",
@@ -35,7 +38,8 @@ const PromotionSlider = () => {
 
   return (
     <div className="promotion-slider">
-      {/* Caja para el título, beneficios y botón de contacto */}
+      <div className='promotion-slider__box'>
+          {/* Caja para el título, beneficios y botón de contacto */}
       <div className="promotion-slider__text-box">
         <h2>CONOCE NUESTROS <span className="highlight">PLANES</span></h2>
         <ul className="promotion-slider__benefits">
@@ -54,7 +58,7 @@ const PromotionSlider = () => {
               key={promo.id}
               className={`promotion-slider__card ${index === currentPromo ? 'active' : ''}`}
             >
-              <p>{promo.title}</p>
+              <img src={promo.image} alt={`${promo.title} plan`} className="promotion-slider__image" />
             </div>
           ))}
         </div>
@@ -67,6 +71,7 @@ const PromotionSlider = () => {
             ></span>
           ))}
         </div>
+      </div>
       </div>
     </div>
   );
