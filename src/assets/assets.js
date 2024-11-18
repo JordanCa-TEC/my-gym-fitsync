@@ -11,5 +11,6 @@ import facebookIcon from '../assets/facebook_fitsync.svg';
 import instagramIcon from '../assets/Instagram_fitsync.svg';
 import tiktokIcon from '../assets/tiktok_fitsync.svg';
 import whatsappIcon  from '../assets/whatsapp_fitsync.svg';	
+import fitsync__bio from '../assets/fitsync__bio.png';
 
-export { logo, logo_Alternative, phone_home, carrito, account_login, promo_01, promo_02, promo_03, facebookIcon, instagramIcon, tiktokIcon, whatsappIcon };
+export { logo, logo_Alternative, phone_home, carrito, account_login, promo_01, promo_02, promo_03, facebookIcon, instagramIcon, tiktokIcon, whatsappIcon, fitsync__bio };

@@ -1,31 +1,20 @@
 import React from 'react';
 import '../sass/_aboutDesktop.scss'; 
+import { logo_Alternative, fitsync__bio } from '../assets/assets';
 
 const AboutDesktop = () => {
   return (
     <div className="about">
-      <header className="about__header">
-        <h1>About FitSync Gym</h1>
-      </header>
 
       <section className="about__mission">
-        <h2>Our Mission</h2>
-        <p>To inspire and support you on your fitness journey.</p>
+        <img src={logo_Alternative} alt="FitSync_Logo" className="about__photo" />
+        <p>En FitSync, revolucionamos la forma en que te conectas con tu salud y bienestar. Somos un gimnasio innovador que combina la tecnología de punta con un enfoque personalizado para ayudarte a alcanzar tus metas de fitness de manera eficiente y efectiva. A través de nuestra app exclusiva, brindamos asesoramiento continuo y seguimiento de tu desempeño, tanto dentro como fuera del gimnasio, para que puedas llevar un estilo de vida saludable en cualquier momento y lugar.</p>
+        <p>Nuestro equipo de expertos en fitness y nutrición está disponible a un solo clic, ofreciéndote planes personalizados, monitoreo de progresos y soporte constante para maximizar tu rendimiento. En FitSync, creemos que el futuro del entrenamiento es digital, y estamos aquí para guiarte en cada paso de tu transformación. ¡Conéctate, asesórate y transforma tu vida con FitSync!</p>
+      </section>
+      <section className="about__mission">
+        <img src={fitsync__bio} alt="FitSync_Logo" className="about__photo" />
       </section>
 
-      <section className="about__team">
-        <h2>Meet the Team</h2>
-        <div className="team__list">
-          <div className="team__member">
-            <h3>John Doe</h3>
-            <p>Lead Trainer</p>
-          </div>
-          <div className="team__member">
-            <h3>Jane Smith</h3>
-            <p>Nutrition Expert</p>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
