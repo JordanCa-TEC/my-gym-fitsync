@@ -4,6 +4,7 @@ import '../sass/_Navbar.scss';
 import {logo} from '../assets/assets.js';
 import {carrito} from '../assets/assets.js';
 import {account_login} from '../assets/assets.js';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -11,10 +12,10 @@ const Navbar = () => {
     <nav className="navbar">
       <img src={logo} alt="Logo__gym-fitsync" className="navbar__logo" />
       <ul className="navbar__menu">
-        <li><a href='/pages/Homedesktop.jsx'>Inicio</a></li>
-        <li><a href='/pages/AboutDesktop.jsx'>Quiénes somos</a></li>
-        <li><a href='#'>Shop</a></li>
-        <li><a href='#'>Contact</a></li>
+          <li><Link to="/">Inicio</Link></li>
+          <li><Link to="/about">Quiénes somos</Link></li>
+          <li><Link to="/shop">Shop</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
       </ul>
       <div className="navbar__menu">
       <a href='#'><img src={carrito} alt="shopping cart" ></img></a>
