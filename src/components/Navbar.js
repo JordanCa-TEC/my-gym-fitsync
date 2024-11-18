@@ -4,6 +4,7 @@ import '../sass/_Navbar.scss';
 import {logo} from '../assets/assets.js';
 import {carrito} from '../assets/assets.js';
 import {account_login} from '../assets/assets.js';
+
 const Navbar = () => {
   return (
     <header className="home__header">
