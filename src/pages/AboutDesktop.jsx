@@ -12,7 +12,7 @@ const AboutDesktop = () => {
         <p>Nuestro equipo de expertos en fitness y nutrición está disponible a un solo clic, ofreciéndote planes personalizados, monitoreo de progresos y soporte constante para maximizar tu rendimiento. En FitSync, creemos que el futuro del entrenamiento es digital, y estamos aquí para guiarte en cada paso de tu transformación. ¡Conéctate, asesórate y transforma tu vida con FitSync!</p>
       </section>
       <section className="about__mission">
-        <img src={fitsync__bio} alt="FitSync_Logo" className="about__photo" />
+        <img src={fitsync__bio} alt="FitSync_Logo" className="about__photo-gym" />
       </section>
 
     </div>

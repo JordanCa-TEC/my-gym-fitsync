@@ -4,27 +4,33 @@
 
   display: flex;
   padding-top: 3%;
+  justify-content: center;
+  background-color: $background-light;
 
     &__mission {
+      width: 40%;
+      height: auto;
       display: flex;
       flex-direction: column;
-      background-color: $background-light;
       padding: 60px 0;
       text-align: center;
+      align-items: center;
       
-      img {
-        width: 10%;
-        margin-bottom: 20px;
-      }
       p {
-        font-size: 1.3rem;
+        font-size: clamp(1rem, 2vw, 1.6rem);
+        text-align: left;
+        line-height: 1.6em;
+        font-weight: 500;
       }
     }
   
     &__photo {
-      display: flex;
-      flex-direction: row;
-      width: 10%;
+      width: 30%;
+    }
+  
+    &__photo-gym {
+      width: 50%;
+      border-radius: 2em;
     }
 
   }
