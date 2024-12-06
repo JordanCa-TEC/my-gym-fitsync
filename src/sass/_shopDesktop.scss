@@ -1,0 +1,32 @@
+@import 'variables';
+
+.shop__desktop{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .parent {
+        display: flex;
+        padding-top: 15em;
+        padding-bottom: 15em;
+        display: grid;
+        height: 70em;
+        width: 50%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 3fr);
+        grid-column-gap: 80px;
+        grid-row-gap: 40px;
+    
+        .div1 { grid-area: 1 / 1 / 2 / 2; background-color: aquamarine; }
+        .div2 { grid-area: 1 / 2 / 2 / 3; background-color: aquamarine; }
+        .div3 { grid-area: 1 / 3 / 2 / 4; background-color: aquamarine; }
+        .div4 { grid-area: 2 / 1 / 3 / 2; background-color: aquamarine; }
+        .div5 { grid-area: 2 / 2 / 3 / 3; background-color: aquamarine; }
+        .div6 { grid-area: 2 / 3 / 3 / 4; background-color: aquamarine; }
+        .div7 { grid-area: 3 / 1 / 4 / 2; background-color: aquamarine; }
+        .div8 { grid-area: 3 / 2 / 4 / 3; background-color: aquamarine; }
+        .div9 { grid-area: 3 / 3 / 4 / 4; background-color: aquamarine; }
+    
+        }
+}
+
+    
