@@ -13,5 +13,8 @@ import tiktokIcon from '../assets/tiktok_fitsync.svg';
 import whatsappIcon  from '../assets/whatsapp_fitsync.svg';	
 import fitsync__bio from '../assets/fitsync__bio.png';
 import gymnasioInterior from '../assets/Foto-gym_fitsync.png';
+import whatsappIconMain from '../assets/whatsapp_fitsync-main.svg';
+import emailFitsync from '../assets/email_fitsync-main.svg';
+import gpsFitsync from '../assets/GPS_fitsync.svg';
 
-export { gymnasioInterior,logo, logo_Alternative, phone_home, carrito, account_login, promo_01, promo_02, promo_03, facebookIcon, instagramIcon, tiktokIcon, whatsappIcon, fitsync__bio };
+export { gpsFitsync,emailFitsync,whatsappIconMain,gymnasioInterior,logo, logo_Alternative, phone_home, carrito, account_login, promo_01, promo_02, promo_03, facebookIcon, instagramIcon, tiktokIcon, whatsappIcon, fitsync__bio };
