@@ -1,6 +1,6 @@
 import React from 'react';
 import '../sass/_ContactDesktop.scss';
-import { gymnasioInterior, whatsappIconMain, emailFitsync, gpsFitsync } from '../assets/assets';
+import { whatsappIconMain, emailFitsync, gpsFitsync } from '../assets/assets';
 
 const ContactDesktop = () => {
   return (
