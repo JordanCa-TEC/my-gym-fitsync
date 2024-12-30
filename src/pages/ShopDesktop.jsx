@@ -1,28 +1,45 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../sass/_shopDesktop.scss';
-import { productHybro } from '../assets/assets';
+import axios from 'axios';
+import { Banner_fitsyncMKT } from '../assets/assets';
+
 
 const ShopDesktop = () => {
+  // Estado para almacenar los productos
+  const [products, setProducts] = useState([]);
+
+  // Llamada a la API cuando el componente se monta
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/products'); // URL de tu API
+        setProducts(response.data); // Asume que la API devuelve un array de productos
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
   return (
-    <div className='shop'>
+    <div className="shop">
       <section className="shop__desktop">
-                <div className="parent">
-                  <div className="shop__item--1 parent__content--div">
-                    <img src={productHybro} alt="Hydro" />
-                    <h2>Proteína Hidrolizada Hydrowhey 3.6lb – Optimum Nutrition</h2>
-                    <h3>Proteínas</h3>
-                    <h2 className='item__price'>s/.365.00</h2>
-                    <button>Agregar al carrito</button>
-                  </div>
-                  <div className="shop__item--2 parent__content--div"> </div>
-                  <div className="shop__item--3 parent__content--div"> </div>
-                  <div className="shop__item--4 parent__content--div"> </div>
-                  <div className="shop__item--5 parent__content--div"> </div>
-                  <div className="shop__item--6 parent__content--div"> </div>
-                  <div className="shop__item--7 parent__content--div"> </div>
-                  <div className="shop__item--8 parent__content--div"> </div>
-                  <div className="shop__item--9 parent__content--div"> </div>
-                </div>
+        <div className="parent">
+          {/* Renderizado dinámico de productos */}
+          {products.map((product, index) => (
+            <div key={index} className={`shop__item--${index + 1} parent__content--div`}>
+              <img src={product.image} alt={product.name} />
+              <h2>{product.name}</h2>
+              <h3>{product.subCategory}</h3>
+              <h2 className="item__price">s/.{product.price}</h2>
+              <button>Agregar al carrito</button>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section className="shop__banner">
+          <img src={Banner_fitsyncMKT} alt="Banner Promocional" />
       </section>
     </div>
   );
